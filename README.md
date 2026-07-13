@@ -14,6 +14,11 @@ Universidad Católica Boliviana "San Pablo"
 
 ---
 
+## Enlaces
+
+- **Demo en vivo (permanente):** https://huggingface.co/spaces/MontserratBARBC/detector-toxicidad-es
+- **Página del proyecto:** https://mbarbacardozo.github.io/deteccion-comentarios-toxicos-pln/
+
 ## Descripción
 
 Sistema de Procesamiento de Lenguaje Natural de punta a punta que detecta comentarios tóxicos en español (insultos, ataques personales, discurso de odio), pensado como herramienta de apoyo para moderación de contenido en medios digitales.
@@ -22,7 +27,7 @@ El sistema no reemplaza la decisión humana: prioriza contenido para revisión.
 
 ## Dataset
 
-**[SocialTOX](https://huggingface.co/datasets/gplsi/SocialTOX)** (Hugging Face) — 4,011 comentarios reales de 16 medios de noticias en español, anotados por nivel de toxicidad. Licencia CC-BY-4.0.
+**SocialTOX** (Hugging Face) — 4,011 comentarios reales de 16 medios de noticias en español, anotados por nivel de toxicidad. Licencia CC-BY-4.0.
 
 ## Pipeline
 
@@ -49,6 +54,11 @@ Naive Bayes superó a la red neuronal — hallazgo consistente con la literatura
 
 ```
 ├── ProyectoNLP_ComentariosToxicos_FINAL.ipynb   # Notebook completo (código + informe)
+├── index.html                                    # Página del proyecto (GitHub Pages)
+├── matriz_nb.png                                 # Matriz de confusión - Naive Bayes
+├── matriz_bilstm.png                             # Matriz de confusión - BiLSTM
+├── dist_clases.png                               # Distribución de clases
+├── curva_umbral.png                              # F1 según umbral de decisión
 └── README.md
 ```
 
@@ -57,7 +67,7 @@ Naive Bayes superó a la red neuronal — hallazgo consistente con la literatura
 1. Abrir el notebook en Google Colab
 2. Activar GPU: Entorno de ejecución -> Cambiar tipo de entorno de ejecución -> GPU (T4)
 3. Ejecutar todas las celdas en orden
-4. La interfaz Gradio se genera al final, con un enlace público compartible
+4. La interfaz Gradio se genera al final del notebook (enlace temporal), o usar directamente el Space permanente enlazado arriba
 
 ## Limitaciones
 
@@ -68,3 +78,4 @@ Naive Bayes superó a la red neuronal — hallazgo consistente con la literatura
 ---
 
 *Proyecto académico — Módulo de Procesamiento de Lenguaje Natural, 2026*
+
