@@ -1,4 +1,4 @@
-# 🛡️ Detección de Comentarios Tóxicos en Español
+# Detección de Comentarios Tóxicos en Español
 
 **Proyecto Final del Módulo · Maestría en Inteligencia Artificial**
 Universidad Católica Boliviana "San Pablo"
@@ -14,17 +14,17 @@ Universidad Católica Boliviana "San Pablo"
 
 ---
 
-## 📋 Descripción
+## Descripción
 
 Sistema de Procesamiento de Lenguaje Natural de punta a punta que detecta comentarios tóxicos en español (insultos, ataques personales, discurso de odio), pensado como herramienta de apoyo para moderación de contenido en medios digitales.
 
-El sistema **no reemplaza la decisión humana** — prioriza contenido para revisión.
+El sistema no reemplaza la decisión humana: prioriza contenido para revisión.
 
-## 🗂️ Dataset
+## Dataset
 
 **[SocialTOX](https://huggingface.co/datasets/gplsi/SocialTOX)** (Hugging Face) — 4,011 comentarios reales de 16 medios de noticias en español, anotados por nivel de toxicidad. Licencia CC-BY-4.0.
 
-## ⚙️ Pipeline
+## Pipeline
 
 | Etapa | Técnica |
 |---|---|
@@ -36,7 +36,7 @@ El sistema **no reemplaza la decisión humana** — prioriza contenido para revi
 | Clasificación neuronal | BiLSTM |
 | Interfaz | Gradio (modo individual + modo lote CSV) |
 
-## 📊 Resultados
+## Resultados
 
 | Modelo | Accuracy | Precision | Recall | F1 |
 |---|---|---|---|---|
@@ -45,21 +45,21 @@ El sistema **no reemplaza la decisión humana** — prioriza contenido para revi
 
 Naive Bayes superó a la red neuronal — hallazgo consistente con la literatura: con un set de entrenamiento moderado (3,016 comentarios, 748 tóxicos), un modelo clásico generaliza mejor que uno neuronal.
 
-## 📁 Contenido del repositorio
+## Contenido del repositorio
 
 ```
 ├── ProyectoNLP_ComentariosToxicos_FINAL.ipynb   # Notebook completo (código + informe)
 └── README.md
 ```
 
-## 🚀 Cómo correrlo
+## Cómo correrlo
 
-1. Abrir el notebook en [Google Colab](https://colab.research.google.com)
-2. Activar GPU: `Entorno de ejecución` → `Cambiar tipo de entorno de ejecución` → GPU (T4)
+1. Abrir el notebook en Google Colab
+2. Activar GPU: Entorno de ejecución -> Cambiar tipo de entorno de ejecución -> GPU (T4)
 3. Ejecutar todas las celdas en orden
 4. La interfaz Gradio se genera al final, con un enlace público compartible
 
-## ⚠️ Limitaciones
+## Limitaciones
 
 - Corpus proveniente de España/Latinoamérica; puede generalizar peor ante contextos muy locales (ej. Bolivia)
 - Dificultad esperable con sarcasmo e ironía
